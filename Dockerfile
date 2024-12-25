@@ -1,10 +1,10 @@
-# Use the official OpenJDK base image for Java 11
-FROM openjdk:11-jre-slim
+# Use the official OpenJDK base image for Java 17
+FROM openjdk:17-jdk-slim
 
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy the main JAR file built by Gradle/Maven to the container
+# Copy the JAR file built by Gradle/Maven to the container
 COPY build/libs/SpringBootBasicsKotlin-0.0.1-SNAPSHOT.jar /app/SpringBootBasicsKotlin.jar
 
 # Expose the port your application runs on
